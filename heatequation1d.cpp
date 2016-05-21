@@ -35,14 +35,6 @@ mat mass(int n)
     return A;
 }
 
-
-mat solvePoisson(int elems, mat f)
-{
-    mat A = stiffness(elems-1);
-    mat x = solve(A,f);
-    return x;
-}
-
 mat solveHeatEqn(mat g, double sElems, double tElems)
 {
     double tau = 10/tElems;
